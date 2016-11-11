@@ -1,0 +1,28 @@
+<h1>Livros</h1>
+ <div class="btn-group btn-group-justified" role="group" aria-label="..."> 
+  <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default"><%= sort_link "titulo" %></button>
+    <button type="button" class="btn btn-default"><%= sort_link "author" %></button>
+    <button type="button" class="btn btn-default"><%= sort_link "edition_year"%></button>
+  </div>
+ </div>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>titulo</th>
+      <th>author</th>
+      <th>edition_year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @livros.each do |livro| %>
+      <tr>
+        <td><%= livro.id %></td>
+        <td><%= livro.titulo %></td>
+        <td><%= livro.author %></td>
+        <td><%= livro.edition_year %></td>    
+      </tr>
+    <% end %>
+  </tbody>
+</table>
